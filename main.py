@@ -32,7 +32,16 @@ def main():
             check=True
         )
 
-        subprocess.run([PYTHON, __file__], check=True)
+        try:
+            subprocess.run(
+                [PYTHON, __file__],
+                cwd=ROOT,
+                check=True
+            )
+        except KeyboardInterrupt:
+            print("\nEXECUÇÃO INTERROMPIDA!")
+            sys.exit(0)
+
         return
 
     etapas = [
@@ -60,15 +69,18 @@ def main():
     print("\nPIPELINE CONCLUÍDO!", flush=True)
     print("INICIANDO FASTAPI...", flush=True)
 
-    subprocess.run(
-        [PYTHON, "-m", "uvicorn", "src.api:app", "--reload"],
-        cwd=ROOT,
-        check=True
-    )
-
+    try:
+        subprocess.run(
+            [PYTHON, "-m", "uvicorn", "src.api:app", "--reload"],
+            cwd=ROOT,
+            check=True
+        )
+    except KeyboardInterrupt:
+        print("\nAPI ENCERRADA!")
+        raise Exception
 
 if __name__ == "__main__":
     try:
         main()
-    except KeyboardInterrupt:
+    except Exception:
         sys.exit(0)
