@@ -1,4 +1,4 @@
-# Projeto Olist — Segmentação de Clientes com Aprendizado Não Supervisionado
+# Projeto Olist - Segmentação de Clientes com Aprendizado Não Supervisionado
 
 ## 1. Objetivo
 
