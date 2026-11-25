@@ -2,7 +2,7 @@
 
 ## 1. Objetivo
 
-Este projeto realiza a integração, a preparação e a análise de dados de pedidos do **Brazilian E-Commerce Public Dataset (Olist)**, com o objetivo de segmentar consumidores utilizando dois algoritmos de aprendizado não supervisionado: **K-Means** e **DBSCAN**.
+Este projeto realiza a integração, a preparação e a análise de dados de pedidos do [**Brazilian E-Commerce Public Dataset (Olist)**](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), com o objetivo de segmentar consumidores utilizando dois algoritmos de aprendizado não supervisionado: **K-Means** e **DBSCAN**.
 
 A unidade de análise é o consumidor identificado por `customer_unique_id`. A análise considera pedidos entregues no período de **1º de janeiro a 31 de dezembro de 2017**.
 
